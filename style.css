@@ -1,0 +1,385 @@
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.home-page {
+    background-image: url("images/SunHorizon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.home-page .detailed-header {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 20px 30px;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+body.home-page .detailed-header h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+    background: transparent;
+    animation: glow 2s ease-in-out infinite;
+}
+
+body.Evergreen-page {
+    background-image: url("images/WhereWindsMeetOP.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.Evergreen-page .detailed-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 10px auto 5px;
+    padding: 15px 25px;
+    max-width: 900px;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+body.Evergreen-page .detailed-header .detailed-logo {
+    width: 90px;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+body.Evergreen-page .detailed-header h1 {
+    color: #cfb104f1;
+    -webkit-text-stroke: 1px #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75), 0 0 10px rgba(255, 255, 255, 0.6);
+    background: transparent;
+    animation: glow 2s ease-in-out infinite;
+    margin: 0;
+}
+
+body.Evergreen-page .detailed-header {
+    margin: 10px auto 5px;
+    padding: 15px 25px;
+}
+
+body.Evergreen-page .section-nav {
+    margin: 5px auto 20px;
+}
+
+body.Sega-page {
+    background-image: url("images/SonicTheHedgeHog.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body > .detailed-header {
+    order: 1;
+}
+
+body > .section-nav {
+    order: 2;
+}
+
+body > .Home-container {
+    order: 3;
+    flex: 1;
+}
+
+body > .main-footer {
+    order: 4;
+}
+
+
+
+.detailed-header h1 {
+    color: #007BFF;
+    background: transparent;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 15px;
+    text-shadow: none; /* remove shadow for white bg */
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: glow 2s ease-in-out infinite;
+}
+
+body.Sega-page .detailed-header h1 {
+    background-image: url("images/SymbolSonic.png");
+    padding-left: 100px; /* extra left padding for image */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #007BFF, 0 0 20px #007BFF;
+    }
+    50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #007BFF, 0 0 40px #007BFF;
+    }
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #007BFF, 0 0 20px #007BFF;
+    }
+}
+
+
+
+.section-nav {
+    order: 2;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 15px 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.section-nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.section-nav-links a:hover {
+    transform: translateY(-3px) scale(1.05);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section-nav-links a:hover::before {
+    left: 100%;
+}
+
+body.Evergreen-page .section-nav {
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 215, 0, 0.7);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin: 5px auto 20px;
+    width: auto;
+    min-width: 0;
+    padding: 10px 40px;
+}
+
+body.Evergreen-page .section-nav-links {
+    white-space: nowrap;
+}
+
+body.Evergreen-page .section-nav-links a {
+    color: #ffd700;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 215, 0, 0.5);
+}
+
+body.Evergreen-page .section-nav-links a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.45);
+}
+
+body.Sega-page .section-nav {
+    background: rgba(0, 0, 35, 0.75);
+    border: 1px solid rgba(0, 175, 255, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin: 10px auto 20px;
+    width: auto;
+    min-width: 0;
+    padding: 10px 30px;
+}
+
+body.Sega-page .section-nav-links {
+    white-space: nowrap;
+    gap: 20px;
+}
+
+body.Sega-page .section-nav-links a {
+    color: #ffffff;
+    background: rgba(0, 60, 140, 0.7);
+    border: 1px solid rgba(0, 175, 255, 0.7);
+    padding: 10px 18px;
+}
+
+body.Sega-page .section-nav-links a:hover {
+    background: rgba(0, 135, 255, 0.8);
+    color: #fff;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.45);
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #fff;
+    color: #000080;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: navy;
+}
+
+
+
+.Sega-page .main-footer {
+    background-image: url("images/SpeedSonic.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.Sega-page .main-footer .footer-content p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+h1 {
+    text-align: center;
+    color: #00ffff;
+    font-size: 50px;
+    font-family: 'Georgia', serif;
+    font-weight: 900;
+    text-shadow: 
+        3px 3px 0px #2b14ff,
+        6px 6px 0px #011218,
+        9px 9px 20px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(255, 230, 0, 0.74),
+        0 0 50px rgba(20, 36, 255, 0.4);
+    letter-spacing: 4px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    animation: epicGlow 2s ease-in-out infinite;
+}
+
+@keyframes epicGlow {
+    0%, 100% {
+        text-shadow: 
+            3px 3px 0px #2b14ff,
+            6px 6px 0px #011218,
+            9px 9px 20px rgba(0, 0, 0, 0.8),
+            0 0 30px rgba(251, 255, 0, 0.788),
+            0 0 50px rgba(20, 43, 255, 0.4);
+    }
+    50% {
+        text-shadow: 
+            3px 3px 0px #2b14ff,
+            6px 6px 0px #011218,
+            9px 9px 20px rgba(0, 0, 0, 0.8),
+            0 0 40px rgba(251, 255, 0, 0.9),
+            0 0 60px rgba(20, 43, 255, 0.6);
+    }
+}
+
+.Home-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Home-Content {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.Home-Content img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.Home-Content img:hover {
+    transform: scale(1.05);
+}
+
+
+
+.Home-Content2{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.Home-Content2 img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.Home-Content2 img:hover {
+    transform: scale(1.05);
+}
+
+
+.main-footer {
+    flex-shrink: 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    color:white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: auto;
+}
