@@ -372,6 +372,30 @@ body.Sega-page .form-status {
     color: rgba(255, 255, 255, 0.8);
 }
 
+body.home-page .stats-panel {
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+body.home-page .stats-panel h2 {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+body.home-page .chart-card {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+body.home-page .chart-card th,
+body.home-page .chart-card td {
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .stat-form {
     display: grid;
     gap: 14px;
