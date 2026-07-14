@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evergreen Studios</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="save_stats.js"></script>
 </head>
 
 <body class="Evergreen-page">
@@ -23,11 +24,28 @@
       </ul>
    </nav>
 
-   
+   <section class="stats-panel">
+      <h2>Add a stat for Evergreen Studios</h2>
+      <form class="stat-form" data-source="Evergreen Studios">
+         <label>
+            Metric
+            <input type="text" name="metric" placeholder="e.g. Story Depth" required>
+         </label>
+         <label>
+            Value
+            <input type="number" name="value" min="0" step="1" placeholder="e.g. 8" required>
+         </label>
+         <label>
+            Notes
+            <textarea name="notes" rows="3" placeholder="Add context for the stat"></textarea>
+         </label>
+         <button type="submit">Save entry</button>
+      </form>
+   </section>
 
    <footer class="main-footer">
     <div class="footer-content">
-        <p>&copy; 2024 New Frontier. All rights reserved.</p>
+        <p>&copy; 2026 New Frontier. All rights reserved.</p>
     </div>
         
 

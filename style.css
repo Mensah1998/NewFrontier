@@ -100,6 +100,14 @@ body > .section-nav {
     order: 2;
 }
 
+body > .stats-panel {
+    order: 3;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 body > .Home-container {
     order: 3;
     flex: 1;
@@ -276,21 +284,155 @@ body.Sega-page .section-nav-links a:hover {
 
 
 .Sega-page .main-footer {
-    background-image: url("images/SpeedSonic.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
 }
 
 .Sega-page .main-footer .footer-content p {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+.stats-panel {
+    max-width: 600px;
+    width: 90%;
+    margin: 20px auto 0;
+    padding: 24px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.2);
+}
 
+.stats-panel h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #0f172a;
+}
 
+body.Evergreen-page .stats-panel {
+    background: rgba(0, 0, 0, 0.65);
+    border: 1px solid rgba(255, 215, 0, 0.6);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+body.Evergreen-page .stats-panel h2 {
+    color: #ffd700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+body.Evergreen-page .stat-form label {
+    color: #e8d400;
+}
+
+body.Evergreen-page .stat-form input,
+body.Evergreen-page .stat-form textarea {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+}
+
+body.Evergreen-page .stat-form input::placeholder,
+body.Evergreen-page .stat-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+body.Evergreen-page .form-status {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+body.Sega-page .stats-panel {
+    background: rgba(0, 30, 70, 0.75);
+    border: 1px solid rgba(0, 175, 255, 0.6);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+body.Sega-page .stats-panel h2 {
+    color: #00d4ff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+body.Sega-page .stat-form label {
+    color: #00e5ff;
+}
+
+body.Sega-page .stat-form input,
+body.Sega-page .stat-form textarea {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border: 1px solid rgba(0, 175, 255, 0.5);
+}
+
+body.Sega-page .stat-form input::placeholder,
+body.Sega-page .stat-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+body.Sega-page .form-status {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.stat-form {
+    display: grid;
+    gap: 14px;
+}
+
+.stat-form label {
+    display: grid;
+    gap: 6px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.stat-form input,
+.stat-form textarea {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.stat-form button {
+    width: fit-content;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2563eb, #0f766e);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form-status {
+    margin: 0;
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.chart-card {
+    margin: 24px 0;
+    padding: 20px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.chart-card h2 {
+    margin-top: 0;
+}
+
+.chart-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.chart-card th,
+.chart-card td {
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
 h1 {
     text-align: center;
     color: #00ffff;
